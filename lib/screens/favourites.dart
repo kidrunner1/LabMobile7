@@ -16,6 +16,27 @@ class FavouritesPage extends StatelessWidget {
         title: const Text('Favourites Page'),
         backgroundColor: Colors.amber,
       ),
+      body: ListView.builder(
+        itemCount: 5,
+        itemBuilder: (context, index) {
+          // ignore: prefer_const_constructors
+          return Card(
+            elevation: 5,
+            margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+            // ignore: prefer_const_constructors
+            child: ListTile(
+              leading: const CircleAvatar(
+                radius: 30,
+                child: FittedBox(
+                  child: Text('500'),
+                ),
+              ),
+              title: Text('รายการ'),
+              subtitle: Text('วัน/เดือน/ปี'),
+            ),
+          );
+        },
+      ),
       drawer: const NavigationDrawer(),
     );
   }

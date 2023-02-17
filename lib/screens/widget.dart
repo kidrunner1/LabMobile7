@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'favourites.dart';
+import 'form_screen.dart';
 import 'home.dart';
 
 class NavigationDrawer extends StatelessWidget {
@@ -67,8 +68,12 @@ Widget buildMenuItems(BuildContext context) => Container(
           ),
           ListTile(
             leading: const Icon(Icons.workspaces_outline),
-            title: const Text('Workflow'),
-            onTap: () {},
+            title: const Text('FromScreen'),
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const FormScreen(),
+              ));
+            },
           ),
           ListTile(
             leading: const Icon(Icons.update),
